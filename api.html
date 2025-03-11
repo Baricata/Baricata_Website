@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Casino Dealer API Documentation - Baricata</title>
+    <meta name="description" content="Comprehensive API documentation for integrating Baricata's AI Casino Dealer into your gaming platform. Access endpoints, code samples, and integration guides.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="AI Casino Dealer API, Gaming Integration, Casino API Documentation, Developer Resources">
+    <link rel="canonical" href="https://baricata.com/integration.html">
+    
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="AI Casino Dealer API Documentation - Baricata">
+    <meta property="og:description" content="Comprehensive API documentation for integrating Baricata's AI Casino Dealer into your gaming platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baricata.com/integration.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="API Documentation & Integration Guide - Baricata">
+    <meta name="twitter:description" content="Comprehensive API documentation and integration guide for Baricata's AI Casino Dealer.">
+
+    <!-- JSON-LD 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "AI Casino Dealer API Documentation",
+      "description": "Comprehensive documentation for integrating Baricata's AI Casino Dealer API into gaming platforms",
+      "author": {
+        "@type": "Organization",
+        "name": "Baricata"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Baricata"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-01-01",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://baricata.com/integration.html"
+      }
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Common styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #2C3E50;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+        header {
+            background: rgba(188, 0, 45, 0.95);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+            padding: 0 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(188, 0, 45, 0.98);
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 1rem;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            .document-embed {
+                height: 800px;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .doc-box {
+                margin: 10px;
+            }
+        }
+        main {
+            margin-top: 120px;
+            padding: 20px 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .docs-section {
+            padding: 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            overflow: visible;
+        }
+        .docs-section h3 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+        .docs-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .doc-box {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        .doc-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .code-box {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Space Mono', monospace;
+            text-align: left;
+            overflow-x: auto;
+        }
+        .document-embed {
+            width: 100%;
+            min-height: 2200px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: visible;
+        }
+        .document-embed::-webkit-scrollbar {
+            display: none;
+        }
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Baricata</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="integration.html">Integration</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="docs-section" style="margin-top: 60px;">
+                <h3>Integration Documentation</h3>
+                <p>Explore our detailed API documentation to get started with integration.</p>
+                <iframe class="document-embed" src="https://docs.google.com/document/d/18w9PmmEyhIY3-Sny4HJ5j7HqWBNPflvz5HtM25lLhXY/preview?rm=minimal&embedded=true&headers=false&chrome=false" frameborder="0"></iframe>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Baricata. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

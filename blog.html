@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Casino Dealer Blog - Latest News and Updates | Baricata</title>
+    <meta name="description" content="Stay updated with the latest news, insights, and developments in AI Casino Dealer technology. Read about industry trends, product updates, and success stories.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="AI Casino Dealer News, Gaming Technology Blog, Casino Innovation, Industry Updates">
+    <link rel="canonical" href="https://baricata.com/blog.html">
+    
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="AI Casino Dealer Blog - Latest News and Updates | Baricata">
+    <meta property="og:description" content="Stay updated with the latest news and developments in AI Casino Dealer technology.">
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://baricata.com/blog.html">
+    <meta property="og:image" content="https://baricata.com/images/blog-og.jpg">
+    <meta property="og:site_name" content="Baricata AI Casino Dealer">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Casino Dealer Blog - Latest Updates">
+    <meta name="twitter:description" content="Stay updated with the latest news in AI Casino Dealer technology.">
+    <meta name="twitter:image" content="https://baricata.com/images/blog-twitter.jpg">
+
+    <!-- JSON-LD 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Baricata AI Casino Dealer Blog",
+      "description": "Latest news and updates about AI Casino Dealer technology and industry insights",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Baricata"
+      },
+      "url": "https://baricata.com/blog.html",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://baricata.com/blog.html"
+      }
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Common styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #2C3E50;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+        header {
+            background: rgba(188, 0, 45, 0.95);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+            padding: 0 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(188, 0, 45, 0.98);
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 1rem;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        main {
+            margin-top: 80px;
+            padding: 20px 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, #BC002D 0%, #8c0021 100%);
+            color: white;
+            padding: 100px 0 80px;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        .hero .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 0.8s ease-out;
+        }
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+                padding: 0 20px;
+            }
+        }
+        .blog-section {
+            padding: 100px 0;
+            background: white;
+        }
+        .blog-section h3 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: #1a1a1a;
+        }
+        .blog-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #BC002D;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .blog-post {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .blog-post h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        .blog-post p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .blog-post a {
+            color: #BC002D;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .blog-post a::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        .blog-post a:hover::after {
+            transform: translateX(5px);
+        }
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Baricata</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="integration.html">Integration</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="blog-section" style="margin-top: 80px; padding-top: 40px;">
+                <h3>Recent Blog Posts</h3>
+                <div class="blog-grid">
+                    <div class="blog-post">
+                        <h4>How AI is Transforming Live Casino Gaming</h4>
+                        <p>Discover the impact of AI on the future of live casino dealers and how it's revolutionizing the gaming experience.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="blog-post">
+                        <h4>Top Trends in Online Casino Technology</h4>
+                        <p>Learn about the latest advancements in online casino gaming and what's next for the industry.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="blog-post">
+                        <h4>Enhancing Player Experience with AI Casino Dealers</h4>
+                        <p>See how AI Casino Dealers create a more immersive and interactive gaming experience for players worldwide.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Baricata. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+Sitemap: https://baricata.com/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 10 

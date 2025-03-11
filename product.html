@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Casino Dealer Product Features - Baricata</title>
+    <meta name="description" content="Discover Baricata's advanced AI Casino Dealer features. State-of-the-art machine learning for realistic dealer interactions and immersive gaming experience.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="AI Casino Dealer Features, Virtual Dealer Technology, Casino AI, Gaming Innovation">
+    <link rel="canonical" href="https://baricata.com/product.html">
+    
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="AI Casino Dealer Product Features - Baricata">
+    <meta property="og:description" content="Discover Baricata's advanced AI Casino Dealer features. State-of-the-art machine learning for realistic dealer interactions.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://baricata.com/product.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Casino Dealer Product Features">
+    <meta name="twitter:description" content="Discover Baricata's advanced AI Casino Dealer features.">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Baricata AI Casino Dealer",
+      "description": "Advanced AI-powered casino dealer technology with natural language processing and real-time facial expressions",
+      "brand": {
+        "@type": "Brand",
+        "name": "Baricata"
+      },
+      "features": [
+        "Natural language processing",
+        "Real-time facial expressions",
+        "Multiple game support",
+        "Secure transaction processing",
+        "Customizable dealer appearance",
+        "Multi-language support",
+        "24/7 availability",
+        "Low latency interaction"
+      ],
+      "applicationCategory": "Business/Productivity",
+      "operatingSystem": "Web-based",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "999",
+        "highPrice": "9999",
+        "offerCount": "3"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      },
+      "url": "https://baricata.com/product.html",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://baricata.com/product.html"
+      }
+    }
+    </script>
+    <style>
+        /* Common styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #2C3E50;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+        header {
+            background: #BC002D;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            background: rgba(188, 0, 45, 0.95);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+            padding: 0 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(188, 0, 45, 0.98);
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 1rem;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-card {
+                margin: 10px 0;
+            }
+            .product-showcase .container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .product-image,
+            .product-info {
+                width: 100%;
+                padding-right: 0;
+            }
+            .product-image {
+                min-height: 300px;
+            }
+        }
+        main {
+            margin-top: 80px;
+            padding: 20px 0;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, rgba(188, 0, 45, 0.95), rgba(0, 0, 0, 0.8)), url('https://source.unsplash.com/1600x900/?casino,luxury') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 160px 0;
+            position: relative;
+            overflow: hidden;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(188, 0, 45, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+            pointer-events: none;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            line-height: 1.2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero-section p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(248, 248, 248, 1), rgba(248, 248, 248, 0));
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+        .features-section {
+            padding: 100px 0;
+            background: white;
+        }
+        .features-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .features-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #BC002D;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #BC002D;
+            margin-bottom: 25px;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .product-showcase {
+            padding: 100px 0;
+            background: #f9f9f9;
+        }
+        .product-showcase .container {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        .product-image {
+            width: 50%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, rgba(188, 0, 45, 0.1), rgba(0, 0, 0, 0.05));
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .product-image:hover img {
+            transform: scale(1.05);
+        }
+        .product-info {
+            width: 50%;
+            padding-right: 20px;
+        }
+        .product-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .product-info p {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .cta-btn {
+            background: #BC002D;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(188, 0, 45, 0.3);
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(188, 0, 45, 0.4);
+            opacity: 0.95;
+        }
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 0;
+        }
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Baricata</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="integration.html">Integration</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Revolutionary AI Casino Dealer Technology</h1>
+                <p>Transform your online casino experience with our cutting-edge AI Casino Dealers</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎲</div>
+                        <h3>Advanced AI Interaction</h3>
+                        <p>Natural language processing for seamless player communication</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Multiple Game Support</h3>
+                        <p>Compatible with various casino games including Blackjack, Poker, and Roulette</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Fair Gaming</h3>
+                        <p>Certified random number generation and secure transaction processing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-showcase">
+            <div class="container">
+                <div class="product-image">
+                    <img src="images/ai-casino-dealer.jpg" alt="AI Casino Dealer Interface" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div style=\'font-size: 1.2rem; color: #666; text-align: center;\'>AI Casino Dealer Interface<br>Image Coming Soon</div>'">
+                </div>
+                <div class="product-info">
+                    <h2>Advanced AI Technology</h2>
+                    <p>Our AI Casino Dealers are powered by state-of-the-art machine learning algorithms, providing a natural and engaging gaming experience. With real-time facial expressions and voice modulation, players enjoy an immersive casino atmosphere from anywhere in the world.</p>
+                    <a href="demo.html" class="cta-btn">See it in Action</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Baricata. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
